@@ -1,0 +1,16 @@
+<div>
+  <div class="ui-float-label">
+    <input id="float-input" type="text" size="40" pInputText>
+    <label for="float-input">Art Name</label>
+  </div>
+  <br>
+  <p-dropdown [options]="artTypeList" [(ngModel)]="selectedArtType"></p-dropdown>
+  <br>
+  <br>
+  <i class="pi pi-calendar" style="font-size: 1.7em"></i><p-calendar [(ngModel)]="date"></p-calendar>
+  <br>
+  <br>
+  <p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
+  <br>
+  <button pButton type="button" class="ui-button-raised ui-button-rounded" label="Submit"></button>
+</div>

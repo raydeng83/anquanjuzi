@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>oauth3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>OAuth 2.0授权框架 – 3. 访问令牌和刷新令牌</h1>
+<h2>访问令牌 (Access Token)</h2>
+<p>访问令牌是用于访问受保护资源的凭据。访问令牌是一个字符串，它代表了客户端获得的授权。该字符串通常对于客户端是不透明的。令牌代表了有具体范围以及期限的访问权限，由资源所有者许可，并由资源服务器和授权服务器实施。</p>
+<p>令牌可以表示一个用于检索授权信息的标识符，或者可以自包含授权信息（即令牌字符串由数据和签名组成）。客户端使用令牌时，有可能被要求提供额外的身份验证凭据。</p>
+<p>访问令牌提供了一个抽象层，用单一的资源服务器能理解的令牌代替不同的授权结构。这种抽象使得颁发访问令牌比颁发用于获取令牌的授权许可更受限制，同时消除了资源服务器理解各种各样身份认证方法的需要。</p>
+<p>基于资源服务器的安全要求，访问令牌可以有不同的格式、结构及采用的方法（如，加密属性）。访问令牌的属性和用于访问受保护资源的方法在RFC6750规范中定义。</p>
+<h2>刷新令牌 (Refresh Token)</h2>
+<p>刷新令牌是用于获取访问令牌的凭据。刷新令牌由授权服务器颁发给客户端，用于在当前访问令牌失效或过期时，获取一个新的访问令牌，或者获得相等或更窄范围的额外的访问令牌（访问令牌可能具有比资源所有者所授权的更短的生命周期和更少的权限）。颁发刷新令牌是可选的，由授权服务器决定。如果授权服务器颁发刷新令牌，在颁发访问令牌时它被包含在内。</p>
+<p>刷新令牌是一个代表由资源所有者给客户端许可的授权的字符串。该字符串通常对于客户端是不透明的。该令牌表示一个用于检索授权信息的标识符。不同于访问令牌，刷新令牌设计只与授权服务器使用，并不会发送到资源服务器。</p>
+<pre><code> +--------+                                                        +---------------+
+ |        |--(A)-- 请求访问令牌(出示授权许可)-------------------------&gt;|               |
+ |        |                                                        |               |
+ |        |&lt;-(B)-- 颁发访问令牌 &amp;　刷新令牌　--------------------------|               |
+ |        |                                                        |               |
+ |        |                                                        |               |
+ |        |                                                        |               |
+ |        |--(C)-- 请求访问资源             +----------+             |   授权服务器　  |
+ | 客户端  |        (出示访问令牌)----------&gt;|          |             |               |
+ |        |                               |          |             |               |
+ |        |&lt;-(D)-- 许可访问资源 ------------|          |             |               |
+ |        |                               |          |             |               |
+ |        |                               |资源服务器　|             |               |
+ |        |                               |          |             |               |
+ |        |--(E)-- 请求访问资源             |          |             |               |
+ |        |      　(出示过期访问令牌)-------&gt;|          |             |               |
+ |        |                               |          |             |               |
+ |        |&lt;-(F)-- 返回无效令牌错误　--------|          |             |               |
+ |        |                               +----------+             |               |
+ |        |                                                        |               |
+ |        |--(G)-- 请求访问令牌(出示刷新令牌)-------------------------&gt;|               |
+ |        |                                                        |               |
+ |        |                                                        |               |
+ |        |&lt;-(H)-- 颁发访问令牌    ----------------------------------|               |
+ |        |                                                        |               |
+ +--------+                                                        +---------------+
+
+                                图7：刷新过期的访问令牌
+</code></pre>
+
+<ul>
+<li>（A）客户端向授权服务器请求访问令牌并出示资源所有者的密码凭据</li>
+<li>（B）授权服务器对客户端进行身份验证并验证授权许可，若有效则颁发访问令牌和刷新令牌</li>
+<li>（C）客户端向资源服务器请求受保护资源并出示访问令牌进行身份验证</li>
+<li>（D）资源服务器验证访问令牌，若有效则处理该请求</li>
+<li>（E）如果客户端知道访问令牌已过期，跳到步骤G，否则它将请求访问资源并出示已过期的访问令牌</li>
+<li>（F）由于访问令牌是无效的，资源服务器返回无效令牌错误。</li>
+<li>（G）客户端通过与授权服务器进行身份验证并出示刷新令牌，请求一个新的访问令牌。</li>
+<li>（H）授权服务器对客户端进行身份验证并验证刷新令牌，若有效则颁发一个新的访问令牌和一个新的刷新令牌（可选）</li>
+</ul>
+<h2>参考资料</h2>
+<ol>
+<li>RFC6749 – The OAuth 2.0 Authorization Framework</li>
+<li>OAuth 2.0 授权框架</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

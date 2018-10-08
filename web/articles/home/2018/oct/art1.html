@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>art1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>什么是IAM？身份和访问管理</h1>
+<h2>IAM定义</h2>
+<p>企业IT中的身份和访问管理（IAM）是关于如何定义和管理各个网络用户的角色和访问权限以及用户被授予（或拒绝）这些权限的情况。这些用户可能是客户（客户身份管理）或员工（员工身份管理）。IAM系统的核心目标是为每一个用户建立数字身份。一旦建立了数字身份，就必须对数字身份的访问周期进行维护，修改和监控。</p>
+<p>根据著名企业身份和访问管理提供商Okta的高级副总裁兼首席安全官Yassir Abousselham的说法，身份管理的首要目标是“在适当的环境中向正确的员工授予相应企业资产的访问权限。这个过程包含从员工加入企业，企业授予相应的权限，到员工离职时根据需要注销该员工的身份。”
+IAM系统为管理员提供了更改用户角色，跟踪用户活动，创建有关这些活动的报告以及持续实施策略的工具和技术。 这些系统旨在提供管理整个企业用户访问的方法，并确保遵守公司政策和政府法规。</p>
+<h2>IAM工具</h2>
+<p>根据Forrester Research在“2017年第4季度的技术潮流：身份和访问管理”（Tech Tide: Identity and Access Management, Q4 2017）中的报告指出了六种IAM核心技术，这些技术成熟度低，但当前业务价值很高。</p>
+<p><strong>API安全（API Security）</strong> 使IAM可用于B2B商务，云集成以及基于微服务的IAM架构。Forrester认为API安全解决方案用于移动应用程序之间的单点登录（SSO）或用户管理的访问。 这会让安全团队更容易管理物联网设备授权和个人身份识别。</p>
+<p><strong>客户身份和访问管理（CIAM）</strong>允许“对用户进行全面管理和认证;自助服务和配置文件管理;以及与CRM，ERP和其他客户管理系统和数据库的集成”。</p>
+<p><strong>身份分析（IA）</strong>将允许安全团队使用机器学习和其他统计算法来检测和阻止风险身份行为。</p>
+<p><strong>身份即服务（IDaaS）</strong>包括“软件即服务（SaaS）解决方案” 提供从门户到Web应用程序和本机移动应用程序的SSO，以及用户帐户配置和访问请求管理。</p>
+<p><strong>身份管理和治理（IMG）</strong>提供自动化并以一种可重复的方式来管理身份生命周期。 如果企业有合规限制，这一点会变得很重要。</p>
+<p><strong>基于风险的身份验证（RBA）</strong>解决方案“在用户session和身份验证的环境中形成风险评分。然后，公司可以为高风险用户提供多因子验证，并允许低风险用户使用单一因素进行身份验证（例如，用户名加密码）。</p>
+<p>不管是属于哪个类别，IAM系统必须灵活性和完整性，以适应当今计算环境的复杂性。 其中一个原因是：身份和访问管理提供商One Identity的产品管理高级主管杰克逊·肖（Jackson Shaw）表示，企业的计算环境过去主要是内部部署，身份管理系统在本地工作时对用户进行身份验证和跟踪。 “房屋周围曾经有过安全围栏，”肖说。 “今天，那个围栏不再存在了。”</p>
+<p>因此，今天的身份管理系统应该使管理员能够轻松管理各种用户的访问权限，包括现场员工和国际承包商; 混合计算环境，包括内部部署计算，软件即服务（SaaS）应用程序以及影子IT和BYOD用户; 和计算架构，包括UNIX，Windows，Macintosh，iOS，Android甚至物联网（IoT）设备。</p>
+<p>最终，身份和访问管理系统应该能够“在整个企业内以一致和可扩展的方式集中管理用户”，Abousselham说。</p>
+<p>近年来，身份即服务（IDaaS）已发展为在订阅的基础上通过云提供的第三方托管服务，为客户的内部部署和基于云的系统提供身份管理。</p>
+<h2>我们为什么需要IAM？</h2>
+<p>被泄露的用户数据通常充当组织网络及其信息资产的入口点。 企业使用身份管理来保护其信息资产免受勒索软件，犯罪黑客攻击，网络钓鱼和其他恶意软件攻击的威胁。 Cybersecurity Ventures预测 ，今年全球勒索软件损害成本预计将超过50亿美元，比2016年增长15％。</p>
+<p>在许多组织中，用户有时拥有比必要更多的访问权限。 强大的IAM系统可以通过确保在整个组织中一致地应用用户访问规则和策略来添加重要的保护层。</p>
+<p>身份和访问管理系统可以提高业务生产力。 系统的集中管理功能可以降低保护用户凭据和访问的复杂性和成本。 与此同时，身份管理系统使工作人员能够在各种环境中提高工作效率（同时保持安全），无论他们是在家中，办公室还是在路上工作。</p>
+<h2>IAM对于合规管理的意义</h2>
+<p>许多政府要求企业关注身份管理。 Sarbanes-Oxley，Gramm-Leach-Bliley和HIPAA等法规要求组织负责控制对客户和员工信息的访问。 身份管理系统可以帮助组织遵守这些法规。</p>
+<p>通用数据保护法规 （GDPR）是一项更新的法规，需要强大的安全性和用户访问控制。 GDPR要求组织保护欧盟公民的个人数据和隐私。 自2018年5月起，GDPR影响在欧盟国家开展业务和/或以欧洲公民为客户的每家公司。</p>
+<p>2017年3月1日，纽约州金融服务部（NYDFS） 新的网络安全法规生效。 该法规规定了在纽约运营的金融服务公司的安全运营的许多要求，包括监控授权用户的活动和维护审计日志的需要 - 这是身份管理系统通常所做的事情。</p>
+<p>通过自动化为企业网络和数据提供安全用户访问的许多方面，身份管理系统可以减轻IT中普通但重要的任务，并帮助他们遵守政府法规。 这些都是至关重要的好处，因为今天，每个IT职位都是安全职位; 全球网络安全工作人员短缺; 不遵守相关法规的处罚可能使组织损失数百万甚至数十亿美元。</p>
+<h2>IAM系统有哪些好处</h2>
+<p>实施身份和访问管理以及相关的最佳实践可以通过多种方式为您提供显著的竞争优势。 如今，大多数企业需要让组织外的用户访问内部系统。 向客户，合作伙伴，供应商，承包商以及员工开放网络可以提高效率并降低运营成本。</p>
+<p>身份管理系统可以允许公司在不影响安全性的情况下，横跨多种本地应用程序，移动应用程序和SaaS工具扩展对其信息系统的访问。 通过提供对外部人员的更多访问，您可以促进整个组织的协作，提高生产力，员工满意度，研发和最终的收入。</p>
+<p>身份管理可以减少IT支持团队关于密码重置的帮助台呼叫次数。 身份管理系统允许管理员自动执行这些以及其他耗时且昂贵的任务。</p>
+<p>身份管理系统可以是安全网络的基石，因为管理用户身份是访问控制图片的基本部分。 身份管理系统几乎都要求公司定义其访问策略，特别是概述谁可以访问哪些数据资源以及他们可以访问哪些条件。</p>
+<p>因此，管理良好的身份意味着更好地控制用户访问，从而降低内部和外部漏洞的风险。 这很重要，因为随着外部威胁的威胁不断增加，内部攻击都非常频繁。根据IBM 2016年网络安全情报指数 ，大约60％的数据泄露是由组织自己的员工造成的。 其中，75％是恶意的; 25％是偶然的。</p>
+<p>如前所述，IAM系统可以通过提供实施全面的安全，审计和访问策略的工具来加强法规遵从性。 现在，许多系统都提供旨在确保组织符合要求的功能。</p>
+<h2>IAM如何运作</h2>
+<p>在过去的几年中，典型的身份管理系统包括四个基本要素：系统用于定义个人用户的个人数据目录（将其视为身份存储库）; 一组用于添加，修改和删除数据的工具（与访问生命周期管理相关）; 一个管理用户访问的系统（执行安全策略和访问权限）; 和审计和报告系统（以验证您的系统上发生了什么）。</p>
+<p>调节用户访问传统上涉及许多用于验证用户身份的验证方法，包括密码，数字证书，令牌和智能卡。 硬件令牌和信用卡大小的智能卡作为双因素身份验证中的一个组件，它将您知道的内容（密码）与您拥有的内容（令牌或卡）结合起来，以验证您的身份。 智能卡带有嵌入式集成电路芯片，可以是安全的微控制器，也可以是具有内部存储器或单独存储芯片的等效智能。 软件令牌可以存在于具有存储功能的任何设备上，从USB驱动器到手机，于2005年出现。</p>
+<p>在当今复杂的计算环境中，随着安全威胁的加剧，强大的用户名和密码不会再削减它。 如今，身份管理系统通常包含生物识别，机器学习和人工智能以及基于风险的身份验证等元素。</p>
+<p>在用户级别，最近的用户身份验证方法有助于更好地保护身份。 例如，支持Touch ID的iPhone的普及使许多人熟悉使用他们的指纹作为认证方法。 较新的Windows 10计算机提供指纹传感器或虹膜扫描以进行生物识别用户身份验证。下一部iPhone将于今年晚些时候推出，传闻其中包括虹膜扫描或面部识别，以对用户进行身份验证，而非指纹扫描。</p>
+<h2>转向多因素身份验证</h2>
+<p>Abousselham说，有些组织正在从双因素身份转变为三因素身份验证，结合了你所知道的东西（你的密码），你拥有的东西（智能手机），以及你所拥有的东西（面部识别，虹膜扫描或指纹传感器）。 “当你从两个因素变为三个时，你可以更加确信你正在与正确的用户打交道，”他说。</p>
+<p>在管理层，由于上下文感知网络访问控制和基于风险的身份验证（RBA）等技术，今天的身份管理系统提供了更高级的用户审计和报告。</p>
+<p>上下文感知网络访问控制是基于策略的。 Okta的产品总监Joe Diamond表示，它预先确定了一个基于各种属性的事件及其结果。 例如，如果IP地址未列入白名单，则可能会阻止该IP地址。 或者，如果没有表明设备已被管理的证书，则上下文感知网络访问控制可能会升级身份验证过程。</p>
+<p>相比之下，RBA更具动态性，并且通常由某种程度的AI启用。 随着RBA，“你开始开放风险评分和机器学习到认证事件，”Diamond说。</p>
+<p>基于风险的身份验证根据当前风险配置文件动态地对身份验证过程应用各种严格级别。 风险越高，认证过程对用户的限制越严格。 在用户可以访问公司的信息资源之前，用户的地理位置或IP地址的更改可能会触发其他身份验证要求。</p>
+<h2>什么是联合身份管理？</h2>
+<p>联合身份管理允许您与可信赖的合作伙伴共享数字身份证。 它是一种身份验证共享机制，允许用户使用相同的用户名，密码或其他ID来访问多个网络。</p>
+<p>单点登录（SSO）是联合ID管理的重要组成部分。 单点登录标准允许在一个网络，网站或应用程序上验证其身份的人员在移动到另一个网络，网站或应用程序时进行身份验证。 该模型仅适用于合作组织（称为可信赖的合作伙伴），它们基本上为彼此的用户提供保证。</p>
+<h2>IAM平台是否基于开放标准？</h2>
+<p>通常使用安全声明标记语言（SAML）发送受信任伙伴之间的授权消息。 该开放规范定义了用于在安全机构之间交换安全断言的XML框架。 SAML在提供身份验证和授权服务的不同供应商平台之间实现互操作性。</p>
+<p>但是，SAML不是唯一的开放标准身份协议。 其他包括OpenID，WS-Trust（Web服务信任的简称）和WS-Federation（由Microsoft和IBM提供企业支持）和OAuth （发音为“Oh-Auth”），它允许第三方使用用户的帐户信息。 Facebook等方面的服务，不会泄露密码。</p>
+<h2>实施IAM有哪些挑战或风险？</h2>
+<p>成功实施身份和访问管理需要跨部门进行预先考虑和协作。 在项目开始之前建立有凝聚力的身份管理战略 - 明确目标，利益相关者支持，定义业务流程的公司 - 可能是最成功的。 Shaw说，身份管理最有效“当你拥有人力资源，IT，安全和其他部门时”。</p>
+<p>通常，身份信息可能来自多个存储库，例如Microsoft Active Directory（AD）或人力资源应用程序。 身份管理系统必须能够在所有这些系统中同步用户身份信息，从而提供单一的事实来源。</p>
+<p>鉴于当今IT人员短缺，身份和访问管理系统必须使组织能够自动且实时地管理不同情况和计算环境中的各种用户。 手动调整数百或数千用户的访问权限和控制是不可行的。</p>
+<p>例如，为离职员工取消配置访问权限可能会陷入困境，尤其是在手动完成时，这种情况经常发生。 报告员工离开公司，然后自动取消对他或她使用的所有应用程序，服务和硬件的访问权限，需要一个自动化，全面的身份管理解决方案。</p>
+<p>Abousselham说，身份验证还必须易于用户执行，IT必须易于部署，最重要的是它必须是安全的。 这解释了为什么移动设备“成为用户身份验证的中心”，他补充说，“因为智能手机可以提供用户当前的地理位置，IP地址和其他可用于身份验证的信息。”</p>
+<p>值得记住的一个风险是：集中操作为黑客和黑客提供了诱人的目标。 通过在所有公司的身份管理活动上添加仪表板，这些系统可以比管理员更多地降低复杂性。 一旦受到攻击，他们就可以允许入侵者创建具有广泛权限的ID并访问许多资源。</p>
+<h2>我应该知道哪些IAM术语？</h2>
+<ul>
+<li><strong>访问管理</strong>：访问管理是指用于控制和监视网络访问的过程和技术。 访问管理功能（如身份验证，授权，信任和安全审核）是内部部署和基于云的系统的顶级ID管理系统的重要组成部分。</li>
+<li><strong>Active Directory（AD）</strong>： Microsoft开发了AD作为Windows域网络的用户身份目录服务。 虽然是专有的，但AD包含在Windows Server操作系统中，因此得到了广泛部署。</li>
+<li><strong>生物识别身份验证</strong>：用于验证依赖于用户独特特征的用户的安全流程。 生物认证技术包括指纹传感器，虹膜和视网膜扫描以及面部识别。</li>
+<li><strong>上下文感知网络访问控制</strong>：上下文感知网络访问控制是基于策略的方法，其根据寻求访问的用户的当前上下文来准许对网络资源的访问。 例如，尝试从未列入白名单的IP地址进行身份验证的用户将被阻止。</li>
+<li><strong>凭据</strong>：用户用于访问网络的标识符，例如用户密码，公钥基础结构（PKI）证书或生物识别信息（指纹，虹膜扫描）。</li>
+<li><strong>取消配置</strong>：从ID存储库中删除标识并终止访问权限的过程。</li>
+<li><strong>数字身份</strong>：身份证本身，包括用户描述和他/她/访问权限。 （“它的”因为端点，例如笔记本电脑或智能手机，可以拥有自己的数字身份。）</li>
+<li><strong>权利</strong>：指定经过身份验证的安全主体的访问权限和特权的属性集。</li>
+<li><strong>身份即服务（IDaaS）</strong>：基于云的IDaaS为驻留在本地和/或云中的组织系统提供身份和访问管理功能。</li>
+<li><strong>身份生命周期管理</strong>：与访问生命周期管理类似，该术语是指用于维护和更新数字身份的整套流程和技术。 身份生命周期管理包括身份同步，供应，取消供应以及用户属性，凭据和权利的持续管理。</li>
+<li><strong>身份同步</strong>：确保多个身份存储（例如，获取的结果）包含给定数字ID的一致数据的过程。</li>
+<li><strong>轻量级目录访问协议（LDAP）</strong>： LDAP是基于开放标准的协议，用于管理和访问分布式目录服务，例如Microsoft的AD</li>
+<li><strong>多重身份验证（MFA）</strong>： MFA是指对网络或系统进行身份验证时不仅需要单个因素（如用户名和密码）。 还需要至少一个附加步骤，例如接收通过SMS发送到智能电话的代码，插入智能卡或USB棒，或满足生物认证要求，例如指纹扫描。</li>
+<li><strong>密码重置</strong>：在此上下文中，它是ID管理系统的一项功能，允许用户重新建立自己的密码，减轻作业管理员的负担并减少支持呼叫。 用户通常通过浏览器访问重置应用程序。 应用程序要求提供一个秘密字或一组问题来验证用户的身份。</li>
+<li>**特权帐户管理 **：此术语是指根据用户的权限管理和审核帐户和数据访问。一般而言，由于其工作或职能，特权用户已被授予对系统的管理访问权限。 例如，特权用户可以设置和删除用户帐户和角色。 供应：创建身份，定义其访问权限并将其添加到ID存储库的过程。</li>
+<li><strong>基于风险的身份验证（RBA）</strong>：基于风险的身份验证根据用户在尝试身份验证时的情况动态调整身份验证要求。 例如，当用户尝试从之前未与之关联的地理位置或IP地址进行身份验证时，这些用户可能会面临其他身份验证要求。</li>
+<li><strong>安全主体</strong>：具有一个或多个凭据的数字身份，可以通过身份验证和授权与网络进行交互。</li>
+<li><strong>单点登录 （SSO）</strong>：一种用于多个相关但独立系统的访问控制。 使用单个用户名和密码，用户无需使用不同的凭据即可访问一个或多个系统。</li>
+<li><strong>用户行为分析（UBA）</strong>： UBA技术检查用户行为模式，并自动应用算法和分析来检测可能表明潜在安全威胁的重要异常。 UBA与其他安全技术不同，后者专注于跟踪设备或安全事件。 UBA有时也与实体行为分析组合在一起，称为UEBA。</li>
+</ul>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

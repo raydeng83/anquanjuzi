@@ -1,0 +1,11 @@
+<h5>
+  热文排行榜
+</h5>
+<br>
+<li class="list-group-item"
+    *ngFor="let art of articleList | paginate: config;">
+
+              <span style="cursor: pointer;" class="art-title" routerLink="/{{art.path}}"
+                    routerLinkActive="active">{{art.title}}
+              </span>
+</li>

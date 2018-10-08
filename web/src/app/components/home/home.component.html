@@ -1,0 +1,45 @@
+<div>
+  <div class="row">
+    <div class="col-8">
+      <ul class="list-group" style="margin-left: 25px; margin-right: 25px;">
+        <h3>最新文章</h3>
+        <br>
+        <li class="list-group-item" style="margin-top: 15px; margin-bottom: 15px;"
+            *ngFor="let art of articleList | paginate: config;">
+
+          <div class="row">
+            <div class="col-4">
+              <div class="text-center">
+                <img class="img-fluid " style="height: 200px;"
+                     src={{art.imageUrl}}/>
+              </div>
+            </div>
+            <div class="col-8">
+              <h5 style="cursor: pointer;" class="art-title" routerLink="/{{art.path}}"
+                  routerLinkActive="active">{{art.title}}
+              </h5>
+              <h6>{{art.date | date :'yyyy-MM-dd'}}</h6>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <app-art-ranking></app-art-ranking>
+    </div>
+  </div>
+
+
+  <pagination-controls style="font-size: medium;" [id]="config.id"
+                       [maxSize]="maxSize"
+                       [directionLinks]="directionLinks"
+                       [autoHide]="autoHide"
+                       [responsive]="responsive"
+                       [previousLabel]="labels.previousLabel"
+                       [nextLabel]="labels.nextLabel"
+                       [screenReaderPaginationLabel]="labels.screenReaderPaginationLabel"
+                       [screenReaderPageLabel]="labels.screenReaderPageLabel"
+                       [screenReaderCurrentLabel]="labels.screenReaderCurrentLabel"
+                       (pageChange)="onPageChange($event)"></pagination-controls>
+
+</div>
