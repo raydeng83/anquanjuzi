@@ -1,5 +1,7 @@
 package com.anquanjuzi.be.model.feed;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -10,11 +12,22 @@ public class Art implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
+    private String type;
     private String date;
     private String imageUrl;
 
-    @Column(columnDefinition="text")
-    private String content;
+    @OneToOne
+    @JsonIgnore
+    private ArtContent artContent;
+
+    public Art(){}
+
+    public Art(String title, String type, String date, String imageUrl) {
+        this.title = title;
+        this.type = type;
+        this.date = date;
+        this.imageUrl = imageUrl;
+    }
 
     public Long getId() {
         return id;
@@ -48,11 +61,19 @@ public class Art implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public String getContent() {
-        return content;
+    public String getType() {
+        return type;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public ArtContent getArtContent() {
+        return artContent;
+    }
+
+    public void setArtContent(ArtContent artContent) {
+        this.artContent = artContent;
     }
 }

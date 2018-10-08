@@ -1,7 +1,7 @@
-export class Article {
+export class Art {
   public title: string;
+  public type: string;
   public date: Date;
-  public path: string;
   public imageUrl: string;
   public content: string;
 }

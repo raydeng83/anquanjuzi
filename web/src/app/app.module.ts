@@ -5,6 +5,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import {ArtService} from './services/art.service';
+
+
 import { Art1Component } from './components/articles/oct-2018/art1/art1.component';
 import { StringFilterPipe } from './pipes/string-filter.pipe';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -23,6 +26,8 @@ import { Oauth4Component } from './components/subjects/oauth/oauth4/oauth4.compo
 import { Art4Component } from './components/articles/oct-2018/art4/art4.component';
 import { Art5Component } from './components/articles/oct-2018/art5/art5.component';
 import { ArtRankingComponent } from './components/art-ranking/art-ranking.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ArtComponent } from './components/art/art.component';
 
 @NgModule({
   declarations: [
@@ -43,16 +48,21 @@ import { ArtRankingComponent } from './components/art-ranking/art-ranking.compon
     Oauth4Component,
     Art4Component,
     Art5Component,
-    ArtRankingComponent
+    ArtRankingComponent,
+    ArtComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NgxPaginationModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [
+    ArtService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

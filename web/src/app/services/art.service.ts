@@ -9,15 +9,8 @@ export class ArtService {
 
   constructor(private http: HttpClient) { }
 
-  sendArt(art) {
-    const url = AppConst.serverPath + '/art/create';
-
-    const info = {
-      'title' : art.title,
-      'type' : art.type.name,
-      'date' : art.date,
-      'content' : art.content
-    };
+  getArtList() {
+    const url = AppConst.serverPath + '/art/getArtList';
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -25,6 +18,18 @@ export class ArtService {
       })
     };
 
-    return this.http.post(url, info, httpOptions);
+    return this.http.get(url, httpOptions);
+  }
+
+  getArtContentById(id) {
+    const url = AppConst.serverPath + '/art/getArtContent/' + id;
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+
+    return this.http.get(url, httpOptions);
   }
 }

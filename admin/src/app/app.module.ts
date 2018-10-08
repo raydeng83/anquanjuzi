@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import {MenubarComponent} from './components/menubar/menubar.component';
 import { AddArtComponent } from './components/add-art/add-art.component';
 import {ArtService} from './services/art.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {ArtService} from './services/art.service';
     BrowserAnimationsModule,
     FormsModule,
     routing,
+    HttpClientModule,
     EditorModule,
     MenubarModule,
     InputTextModule,

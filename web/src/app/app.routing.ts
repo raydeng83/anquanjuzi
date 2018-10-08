@@ -13,6 +13,7 @@ import {Oauth3Component} from './components/subjects/oauth/oauth3/oauth3.compone
 import {Oauth4Component} from './components/subjects/oauth/oauth4/oauth4.component';
 import {Art4Component} from './components/articles/oct-2018/art4/art4.component';
 import {Art5Component} from './components/articles/oct-2018/art5/art5.component';
+import {ArtComponent} from './components/art/art.component';
 
 
 
@@ -25,6 +26,10 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'art/:id',
+    component: ArtComponent
   },
   {
     path: 'subjects',
