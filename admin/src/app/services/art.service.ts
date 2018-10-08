@@ -14,6 +14,7 @@ export class ArtService {
 
     const info = {
       'title' : art.title,
+      'originalUrl' : art.originalUrl,
       'type' : art.type.name,
       'date' : art.date,
       'content' : art.content

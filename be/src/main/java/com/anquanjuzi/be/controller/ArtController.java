@@ -32,13 +32,14 @@ public class ArtController {
         ObjectMapper om = new ObjectMapper();
 
         String title = (String) om.convertValue(mapper.get("title"), Object.class);
+        String originalUrl = (String) om.convertValue(mapper.get("originalUrl"), Object.class);
         String type = (String) om.convertValue(mapper.get("type"), Object.class);
         String date = (String) om.convertValue(mapper.get("date"), Object.class);
         String content = (String) om.convertValue(mapper.get("content"), Object.class);
 
         Art art = new Art(title, type, date, "");
 
-        artService.saveArt(art, content);
+        artService.saveArt(art, content, originalUrl);
     }
 
     @RequestMapping("/getArtList")

@@ -14,6 +14,8 @@ public class ArtContent {
 
     @OneToOne
     private Art art;
+    private String originalUrl;
+
 
     @Column(columnDefinition="text")
     private String content;
@@ -51,5 +53,13 @@ public class ArtContent {
 
     public void setImageUrlList(List<String> imageUrlList) {
         this.imageUrlList = imageUrlList;
+    }
+
+    public String getOriginalUrl() {
+        return originalUrl;
+    }
+
+    public void setOriginalUrl(String originalUrl) {
+        this.originalUrl = originalUrl;
     }
 }

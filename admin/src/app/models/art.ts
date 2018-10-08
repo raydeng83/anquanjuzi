@@ -4,4 +4,5 @@ export class Art {
   public date: Date;
   public imageUrl: string;
   public content: string;
+  public originalUrl: string;
 }

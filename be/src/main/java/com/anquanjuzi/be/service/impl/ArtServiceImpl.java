@@ -21,12 +21,13 @@ public class ArtServiceImpl implements ArtService {
     }
 
     @Override
-    public void saveArt(Art art, String content) {
+    public void saveArt(Art art, String content, String originalUrl) {
         art = artRepository.save(art);
 
         ArtContent artContent = new ArtContent();
         artContent.setArt(art);
         artContent.setContent(content);
+        artContent.setOriginalUrl(originalUrl);
         artContent = artContentRepository.save(artContent);
 
         art.setArtContent(artContent);

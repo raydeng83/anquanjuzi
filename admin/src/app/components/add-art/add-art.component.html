@@ -2,9 +2,16 @@
   <form (ngSubmit)="onSubmitArt()">
     <div class="form-group">
       <div class="ui-float-label">
-        <input id="float-input" class="form-control" type="text" size="40" pInputText name="art-title"
+        <input id="title" class="form-control" type="text" size="40" pInputText name="art-title"
                [(ngModel)]="art.title">
-        <label for="float-input">Art Name</label>
+        <label for="title">Art Name</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="ui-float-label">
+        <input id="original-url" class="form-control" type="text" size="40" pInputText name="art-title"
+               [(ngModel)]="art.originalUrl">
+        <label for="original-url">Original Url</label>
       </div>
     </div>
     <div class="form-group">
