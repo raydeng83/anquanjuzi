@@ -6,4 +6,5 @@ export class Art {
   public content: string;
   public originalUrl: string;
   public imageId; string;
+  public summary: string;
 }

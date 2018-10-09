@@ -9,7 +9,7 @@
       <div class="ui-float-label">
         <input id="title" class="form-control" type="text" size="40" pInputText name="art-title"
                [(ngModel)]="art.title">
-        <label for="title">Art Name</label>
+        <label for="title">Title</label>
       </div>
     </div>
     <div class="form-group">
@@ -26,6 +26,10 @@
     <div class="form-group">
       <i class="pi pi-calendar" style="font-size: 1.7em"></i>
       <p-calendar name="art-date" [(ngModel)]="art.date"></p-calendar>
+    </div>
+    <div class="form-group">
+      <label for="summary">Summary</label>
+      <textarea class="form-control" id="summary" name="summary" rows="6" [(ngModel)]="art.summary"></textarea>
     </div>
     <div class="form-group">
       <p-editor name="art-content" [(ngModel)]="art.content" [style]="{'height':'600px'}"></p-editor>

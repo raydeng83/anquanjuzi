@@ -3,9 +3,9 @@
 </h5>
 <br>
 <li class="list-group-item"
-    *ngFor="let art of articleList | paginate: config;">
+    *ngFor="let art of artList | paginate: config;">
 
-              <span style="cursor: pointer;" class="art-title" routerLink="/{{art.path}}"
+              <span style="cursor: pointer;" class="art-title"  routerLink="/art/{{art.id}}"
                     routerLinkActive="active">{{art.title}}
               </span>
 </li>

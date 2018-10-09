@@ -16,6 +16,9 @@ public class Art implements Serializable {
     private String type;
     private String date;
 
+    @Column(columnDefinition="text")
+    private String summary;
+
     @OneToOne
     private Image image;
 
@@ -25,10 +28,11 @@ public class Art implements Serializable {
 
     public Art(){}
 
-    public Art(String title, String type, String date) {
+    public Art(String title, String type, String date, String summary) {
         this.title = title;
         this.type = type;
         this.date = date;
+        this.summary = summary;
     }
 
     public Long getId() {
@@ -77,5 +81,13 @@ public class Art implements Serializable {
 
     public void setImage(Image image) {
         this.image = image;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 }

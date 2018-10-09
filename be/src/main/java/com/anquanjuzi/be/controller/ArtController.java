@@ -44,8 +44,9 @@ public class ArtController {
         String date = (String) om.convertValue(mapper.get("date"), Object.class);
         String content = (String) om.convertValue(mapper.get("content"), Object.class);
         String imageId = (String) om.convertValue(mapper.get("imageId"), Object.class);
+        String summary = (String) om.convertValue(mapper.get("summary"), Object.class);
 
-        Art art = new Art(title, type, date);
+        Art art = new Art(title, type, date, summary);
 
         artService.saveArt(art, content, originalUrl, imageId);
     }

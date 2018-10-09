@@ -11,7 +11,7 @@
             <div class="col-4">
               <div class="text-center">
                 <img src="{{serverPath}}/image/getImage/{{art.image.id}}" class="img-fluid" style="cursor: pointer; width: auto; height: 200px;"
-                     alt="Image Thumbnail" >
+                     alt="Image Thumbnail"  routerLink="/art/{{art.id}}" routerLinkActive="active">
               </div>
             </div>
             <div class="col-8">
@@ -19,6 +19,8 @@
                   routerLinkActive="active">{{art.title}}
               </h5>
               <h6>{{art.date | date :'yyyy-MM-dd'}}</h6>
+              <br>
+              <span style="font-size: 0.85em; color:#909090">{{art.summary}}</span>
             </div>
           </div>
         </li>

@@ -18,7 +18,8 @@ export class ArtService {
       'type' : art.type.name,
       'date' : art.date,
       'content' : art.content,
-      'imageId' : art.imageId
+      'imageId' : art.imageId,
+      'summary' : art.summary
     };
 
     const httpOptions = {
