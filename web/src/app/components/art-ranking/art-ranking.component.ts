@@ -49,9 +49,9 @@ export class ArtRankingComponent implements OnInit {
   getArtList() {
     this.artService.getArtList().subscribe(
       res => {
-        console.log(res);
         this.artList = res;
-        console.log(this.artList);
+        this.artList = this.artList.sort((a: any, b: any) =>
+          new Date(b.date).getTime() - new Date(a.date).getTime());
       }
     );
   }
