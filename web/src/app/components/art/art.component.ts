@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ArtService} from '../../services/art.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-art',
@@ -24,6 +25,9 @@ export class ArtComponent implements OnInit {
       res => {
         console.log(res);
         this.artContent = res;
+        $( document ).ready(function() {
+          $('img').addClass('img-fluid');
+        });
       }
     );
   }

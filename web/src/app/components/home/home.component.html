@@ -1,6 +1,6 @@
 <div>
   <div class="row">
-    <div class="col-8">
+    <div class="col-sm-8">
       <ul class="list-group" style="margin-left: 25px; margin-right: 25px;">
         <h3>最新文章</h3>
         <br>
@@ -8,13 +8,13 @@
             *ngFor="let art of artList | paginate: config;">
 
           <div class="row">
-            <div class="col-4">
-              <div class="text-center">
+            <div class="col-sm-4">
+              <div class="text-center" style="margin-bottom: 20px;">
                 <img src="{{serverPath}}/image/getImage/{{art.image.id}}" class="img-fluid" style="cursor: pointer; width: auto; height: 200px;"
                      alt="Image Thumbnail"  routerLink="/art/{{art.id}}" routerLinkActive="active">
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-sm-8">
               <h5 style="cursor: pointer;" class="art-title" routerLink="/art/{{art.id}}"
                   routerLinkActive="active">{{art.title}}
               </h5>
@@ -26,7 +26,7 @@
         </li>
       </ul>
     </div>
-    <div class="col-4">
+    <div class="col-sm-4">
       <app-art-ranking></app-art-ranking>
     </div>
   </div>

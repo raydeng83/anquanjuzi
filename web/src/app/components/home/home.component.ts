@@ -3,7 +3,6 @@ import {Article} from '../../models/article';
 import {ArtService} from '../../services/art.service';
 import {AppConst} from '../../app-const';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
