@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Article} from '../../models/article';
 import {ArtService} from '../../services/art.service';
+import {AppConst} from '../../app-const';
 
 
 @Component({
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
   public articleList = [];
   public artList;
 
+  serverPath = AppConst.serverPath;
 
   constructor(private artService: ArtService) {
   }

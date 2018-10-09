@@ -1,6 +1,11 @@
 <div>
   <form (ngSubmit)="onSubmitArt()">
     <div class="form-group">
+      <p-fileUpload name="file" url="http://localhost:8282/aqjz-be/image/upload" accept="image/*" maxFileSize="1000000"
+                    (onUpload)="onUpload($event)"></p-fileUpload>
+    </div>
+    <hr>
+    <div class="form-group">
       <div class="ui-float-label">
         <input id="title" class="form-control" type="text" size="40" pInputText name="art-title"
                [(ngModel)]="art.title">
@@ -14,6 +19,7 @@
         <label for="original-url">Original Url</label>
       </div>
     </div>
+
     <div class="form-group">
       <p-dropdown name="art-type" [options]="artTypeList" [(ngModel)]="art.type"></p-dropdown>
     </div>

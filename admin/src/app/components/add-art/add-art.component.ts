@@ -12,6 +12,7 @@ export class AddArtComponent implements OnInit {
   artTypeList: SelectItem[];
 
   art = new Art();
+  imageId;
 
   constructor(private artService: ArtService) {
     this.artTypeList = [
@@ -28,6 +29,13 @@ export class AddArtComponent implements OnInit {
         this.art = new Art();
       }
     );
+  }
+
+  onUpload(event) {
+    console.log(event);
+    const image = JSON.parse(event.xhr.response);
+    this.imageId = image.id;
+    this.art.imageId = image.id;
   }
 
   ngOnInit() {

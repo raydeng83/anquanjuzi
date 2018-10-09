@@ -29,6 +29,7 @@ import { ArtRankingComponent } from './components/art-ranking/art-ranking.compon
 import {HttpClientModule} from '@angular/common/http';
 import { ArtComponent } from './components/art/art.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,8 +58,7 @@ import { ArtComponent } from './components/art/art.component';
     NgxPaginationModule,
     FormsModule,
     routing,
-    HttpClientModule,
-
+    HttpClientModule
   ],
   providers: [
     ArtService

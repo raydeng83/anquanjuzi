@@ -5,4 +5,5 @@ export class Art {
   public imageUrl: string;
   public content: string;
   public originalUrl: string;
+  public imageId; string;
 }

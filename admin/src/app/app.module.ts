@@ -9,7 +9,7 @@ import {FormsModule} from '@angular/forms';
 // PrimeNG Modules
 import {MenubarModule} from 'primeng/menubar';
 import {InputTextModule} from 'primeng/inputtext';
-import {ButtonModule, CalendarModule, DropdownModule, EditorModule} from 'primeng/primeng';
+import {ButtonModule, CalendarModule, DropdownModule, EditorModule, FileUploadModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -36,7 +36,9 @@ import {HttpClientModule} from '@angular/common/http';
     InputTextModule,
     DropdownModule,
     ButtonModule,
-    CalendarModule
+    CalendarModule,
+    FileUploadModule
+
   ],
   providers: [
     ArtService
