@@ -23,6 +23,8 @@ import { Oauth4Component } from './components/subjects/oauth/oauth4/oauth4.compo
 import { ArtRankingComponent } from './components/art-ranking/art-ranking.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ArtComponent } from './components/art/art.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { ArtComponent } from './components/art/art.component';
     Oauth3Component,
     Oauth4Component,
     ArtRankingComponent,
-    ArtComponent
+    ArtComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

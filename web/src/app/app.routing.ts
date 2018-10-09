@@ -9,6 +9,8 @@ import {Oauth2Component} from './components/subjects/oauth/oauth2/oauth2.compone
 import {Oauth3Component} from './components/subjects/oauth/oauth3/oauth3.component';
 import {Oauth4Component} from './components/subjects/oauth/oauth4/oauth4.component';
 import {ArtComponent} from './components/art/art.component';
+import {AboutComponent} from './components/about/about.component';
+import {ContactComponent} from './components/contact/contact.component';
 
 
 
@@ -25,6 +27,14 @@ const appRoutes: Routes = [
   {
     path: 'art/:id',
     component: ArtComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: 'subjects',
