@@ -18,6 +18,8 @@ export class RegistrationComponent implements OnInit {
   emptyPassword2 = false;
   invalidEmail = false;
   mismatchPassword = false;
+  usernameExists = false;
+  emailExists = false;
 
   constructor(private userService: UserService, private snotifyService: SnotifyService) { }
 
@@ -73,18 +75,43 @@ export class RegistrationComponent implements OnInit {
       return;
     }
 
-    this.userService.register(this.user).subscribe(
+    this.userService.checkExistingUser(this.user).subscribe(
       res => {
         console.log(res);
-        this.snotifyService.success('注册成功，请登录', '', {
-          timeout: 2000,
-          showProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          position: SnotifyPosition.centerCenter
-        });
+        if(res.res == 'username exists') {
+          this.usernameExists = true;
+          const that = this;
+          setTimeout(function() {
+            that.usernameExists = false;
+          }, 4000);
+          return;
+        }
+
+        if(res.res == 'email exists') {
+          this.emailExists = true;
+          const that = this;
+          setTimeout(function() {
+            that.emailExists = false;
+          }, 4000);
+          return;
+        }
+
+        this.userService.register(this.user).subscribe(
+          res => {
+            console.log(res);
+            this.snotifyService.success('注册成功，请登录', '', {
+              timeout: 2000,
+              showProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: true,
+              position: SnotifyPosition.centerCenter
+            });
+          }
+        );
       }
     );
+
+
   }
 
   ngOnInit() {

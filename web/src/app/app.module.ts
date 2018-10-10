@@ -29,6 +29,8 @@ import {Oauth4Component} from './components/subjects/oauth/oauth4/oauth4.compone
 import {ArtRankingComponent} from './components/art-ranking/art-ranking.component';
 import {HttpClientModule} from '@angular/common/http';
 import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
+import { LandingComponent } from './components/landing/landing.component';
+import {LoginGuardService} from './services/login-guard.service';
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
     AboutComponent,
     ContactComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,7 @@ import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
     ArtService,
     LoginService,
     UserService,
+    LoginGuardService,
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
     SnotifyService
   ],

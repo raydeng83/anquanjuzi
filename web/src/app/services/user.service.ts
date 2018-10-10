@@ -21,4 +21,13 @@ export class UserService {
 
     return this.http.post(url, JSON.stringify(user), httpOptions);
   }
+
+  checkExistingUser(user) {
+    const url = this.serverPath + '/user/checkExistingUser';
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+
+    return this.http.post(url, JSON.stringify(user), httpOptions);
+  }
 }

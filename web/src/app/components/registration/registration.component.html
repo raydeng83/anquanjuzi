@@ -6,13 +6,13 @@
     </div>
     <form (ngSubmit)="onRegistration()">
       <div class="form-group">
-        <label for="username">用户名 *</label> <span class="error-message" *ngIf="emptyUsername">用户名不能为空</span>
+        <label for="username">用户名 *</label> <span class="error-message" *ngIf="emptyUsername">用户名不能为空</span> <span class="error-message" *ngIf="usernameExists">用户名已存在</span>
         <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username"
                required="required"
                autofocus="autofocus"/>
       </div>
       <div class="form-group">
-        <label for="username">邮箱 *</label> <span class="error-message" *ngIf="invalidEmail">邮箱格式不正确</span>
+        <label for="username">邮箱 *</label> <span class="error-message" *ngIf="invalidEmail">邮箱格式不正确</span> <span class="error-message" *ngIf="emailExists">邮箱已存在</span>
         <input type="text" class="form-control" id="email" name="username" [(ngModel)]="user.email"
                required="required"
                autofocus="autofocus"/>

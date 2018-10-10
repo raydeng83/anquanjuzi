@@ -21,7 +21,9 @@
         <a class="nav-link" routerLink="/contact" routerLinkActive="active">联系方式</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/registration" routerLinkActive="active">登陆/注册</a>
+        <a *ngIf="!loggedIn" class="nav-link" routerLink="/registration" routerLinkActive="active">登陆/注册</a>
+        <span style="font-size:16px;font-style: italic;" *ngIf="loggedIn" class="nav-link">欢迎, {{user?.username}} / <span
+          style="cursor: pointer; color: dodgerblue;" (click)="onLogout()">注销</span></span>
       </li>
     </ul>
   </div>

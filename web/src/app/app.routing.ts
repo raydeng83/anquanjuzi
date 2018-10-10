@@ -13,6 +13,8 @@ import {AboutComponent} from './components/about/about.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {LoginComponent} from './components/login/login.component';
 import {RegistrationComponent} from './components/registration/registration.component';
+import {LandingComponent} from './components/landing/landing.component';
+import {LoginGuardService} from './services/login-guard.service';
 
 
 
@@ -45,6 +47,11 @@ const appRoutes: Routes = [
   {
     path: 'registration',
     component: RegistrationComponent
+  },
+  {
+    path: 'landing',
+    component: LandingComponent,
+    canActivate: [LoginGuardService]
   },
   {
     path: 'subjects',

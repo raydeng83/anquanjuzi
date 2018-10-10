@@ -57,8 +57,8 @@ public class LoginController {
     }
 
     @RequestMapping("/checkLoggedIn")
-    public String checkLoggedIn() {
-        return "Session Active";
+    public HttpStatus checkLoggedIn() {
+        return HttpStatus.OK;
     }
 
     @RequestMapping("/checkSession")

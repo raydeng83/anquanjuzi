@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
           //   this.router.navigate(['/adminPanel']);
           // }
           // this.busy = false;
-
+          window.location.reload();
         },
         error => {
           this.busy = false;
@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit {
         const user = JSON.parse(JSON.stringify(res));
         this.loggedIn = true;
         const role = user.authorities[0].authority;
-
+        this.router.navigate(['/landing']);
         // if (role == 'ROLE_USER') {
         //   this.router.navigate(['/dashboard']);
         // }
