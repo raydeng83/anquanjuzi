@@ -10,6 +10,8 @@ import {SnotifyPosition, SnotifyService} from 'ng-snotify';
 })
 export class RegistrationComponent implements OnInit {
 
+  busy = false;
+
   user = new User();
   secondPassword;
 
@@ -78,6 +80,7 @@ export class RegistrationComponent implements OnInit {
     this.userService.checkExistingUser(this.user).subscribe(
       res => {
         console.log(res);
+        // @ts-ignore
         if(res.res == 'username exists') {
           this.usernameExists = true;
           const that = this;
@@ -87,6 +90,7 @@ export class RegistrationComponent implements OnInit {
           return;
         }
 
+        // @ts-ignore
         if(res.res == 'email exists') {
           this.emailExists = true;
           const that = this;

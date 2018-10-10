@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { AppConst } from '../../app-const';
-import { LoginService } from '../../services/login.service';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Subscription} from 'rxjs';
+import {AppConst} from '../../app-const';
+import {LoginService} from '../../services/login.service';
 
 
 @Component({
@@ -11,22 +11,22 @@ import { LoginService } from '../../services/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private busy = false;
+  busy = false;
 
-  private serverPath = AppConst.serverPath;
-  private loginError = false;
-  private loggedIn = false;
-  private credential = { 'username': '', 'password': '' };
+  serverPath = AppConst.serverPath;
+  loginError = false;
+  loggedIn = false;
+  credential = {'username': '', 'password': ''};
 
-  private emailSent = false;
-  private usernameExists = false;
-  private emailExists = false;
-  private username: string;
-  private email: string;
+  emailSent = false;
+  usernameExists = false;
+  emailExists = false;
+  username: string;
+  email: string;
 
-  private emailNotExists = false;
-  private forgetPasswordEmailSent = false;
-  private recoverEmail: string;
+  emailNotExists = false;
+  forgetPasswordEmailSent = false;
+  recoverEmail: string;
 
   constructor(
     private loginService: LoginService,
@@ -82,7 +82,6 @@ export class LoginComponent implements OnInit {
         // if (role == 'ROLE_ADMIN') {
         //   this.router.navigate(['/adminPanel']);
         // }
-        this.busy = false;
       },
       error => {
         this.busy = false;
