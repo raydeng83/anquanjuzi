@@ -1,0 +1,10 @@
+
+.reg-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.error-message {
+  color: red;
+  margin-left: 30px;
+}

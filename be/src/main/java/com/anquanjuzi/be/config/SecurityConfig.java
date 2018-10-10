@@ -48,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/googleLoginPost",
             "/art/**",
             "/image/**",
-            "/**"
+            "/user/registration"
     };
 
     @Override

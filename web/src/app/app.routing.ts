@@ -11,6 +11,8 @@ import {Oauth4Component} from './components/subjects/oauth/oauth4/oauth4.compone
 import {ArtComponent} from './components/art/art.component';
 import {AboutComponent} from './components/about/about.component';
 import {ContactComponent} from './components/contact/contact.component';
+import {LoginComponent} from './components/login/login.component';
+import {RegistrationComponent} from './components/registration/registration.component';
 
 
 
@@ -35,6 +37,14 @@ const appRoutes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'registration',
+    component: RegistrationComponent
   },
   {
     path: 'subjects',

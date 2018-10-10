@@ -1,30 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 import {routing} from './app.routing';
 import {NgxPaginationModule} from 'ngx-pagination';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './components/home/home.component';
 import {ArtService} from './services/art.service';
+import {ArtComponent} from './components/art/art.component';
+import {AboutComponent} from './components/about/about.component';
+import {ContactComponent} from './components/contact/contact.component';
+import {LoginComponent} from './components/login/login.component';
+import {RegistrationComponent} from './components/registration/registration.component';
+import {LoginService} from './services/login.service';
+import {UserService} from './services/user.service';
 
-
-import { StringFilterPipe } from './pipes/string-filter.pipe';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import {StringFilterPipe} from './pipes/string-filter.pipe';
+import {NavBarComponent} from './components/nav-bar/nav-bar.component';
 import {FormsModule} from '@angular/forms';
-import { TitleBarComponent } from './components/title-bar/title-bar.component';
+import {TitleBarComponent} from './components/title-bar/title-bar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { SubjectsComponent } from './components/subjects/subjects.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { Oauth1Component } from './components/subjects/oauth/oauth1/oauth1.component';
-import { OauthComponent } from './components/subjects/oauth/oauth.component';
-import { Oauth2Component } from './components/subjects/oauth/oauth2/oauth2.component';
-import { Oauth3Component } from './components/subjects/oauth/oauth3/oauth3.component';
-import { Oauth4Component } from './components/subjects/oauth/oauth4/oauth4.component';
-import { ArtRankingComponent } from './components/art-ranking/art-ranking.component';
+import {SubjectsComponent} from './components/subjects/subjects.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {Oauth1Component} from './components/subjects/oauth/oauth1/oauth1.component';
+import {OauthComponent} from './components/subjects/oauth/oauth.component';
+import {Oauth2Component} from './components/subjects/oauth/oauth2/oauth2.component';
+import {Oauth3Component} from './components/subjects/oauth/oauth3/oauth3.component';
+import {Oauth4Component} from './components/subjects/oauth/oauth4/oauth4.component';
+import {ArtRankingComponent} from './components/art-ranking/art-ranking.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ArtComponent } from './components/art/art.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
+import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
 
 
 @NgModule({
@@ -44,7 +48,9 @@ import { ContactComponent } from './components/contact/contact.component';
     ArtRankingComponent,
     ArtComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -52,11 +58,17 @@ import { ContactComponent } from './components/contact/contact.component';
     NgxPaginationModule,
     FormsModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    SnotifyModule
   ],
   providers: [
-    ArtService
+    ArtService,
+    LoginService,
+    UserService,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
+    SnotifyService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

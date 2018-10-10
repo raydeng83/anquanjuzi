@@ -1,0 +1,33 @@
+
+<div class="login-container">
+<div *ngIf="!busy" class="input">
+  <div class="text-center" style=" margin-bottom: 20px;">
+    <h3>请输入用户名密码登陆</h3>
+    <br>
+  </div>
+  <div *ngIf="loginError" style="color:red;">用户名和绑定的密码不一致</div><br>
+  <form (ngSubmit)="onLogin()">
+    <div class="form-group">
+      <label for="username">用户名 *</label>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="credential.username"
+             required="required"
+             autofocus="autofocus"/>
+    </div>
+    <div class="form-group">
+      <label for="password">密码 *</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="credential.password"
+             required="required"
+      />
+
+    </div>
+    <button type="submit" class="btn btn-dark btn-block">登陆</button>
+  </form>
+  <span>还没注册？<a href="#" routerLink="/registration" routerLinkActive="active">赶紧注册</a></span>
+
+</div>
+
+<div *ngIf="busy" class="text-center" style="margin: 100px 0px 0 0px">
+  <i class="fas fa-sync fa-5x fa-spin animated"></i>
+</div>
+
+</div>

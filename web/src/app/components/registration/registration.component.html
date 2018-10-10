@@ -1,0 +1,43 @@
+<div class="reg-container">
+  <div *ngIf="!busy" class="input">
+    <div class="text-center" style=" margin-bottom: 20px;">
+      <h3>新用户注册</h3>
+      <br>
+    </div>
+    <form (ngSubmit)="onRegistration()">
+      <div class="form-group">
+        <label for="username">用户名 *</label> <span class="error-message" *ngIf="emptyUsername">用户名不能为空</span>
+        <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username"
+               required="required"
+               autofocus="autofocus"/>
+      </div>
+      <div class="form-group">
+        <label for="username">邮箱 *</label> <span class="error-message" *ngIf="invalidEmail">邮箱格式不正确</span>
+        <input type="text" class="form-control" id="email" name="username" [(ngModel)]="user.email"
+               required="required"
+               autofocus="autofocus"/>
+      </div>
+      <div class="form-group">
+        <label for="password">密码 *</label> <span class="error-message" *ngIf="mismatchPassword">两次密码不相同</span> <span
+        class="error-message" *ngIf="emptyPassword1">密码不能为空</span>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password"
+               required="required"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">确认密码 *</label> <span class="error-message" *ngIf="emptyPassword2">密码不能为空</span>
+        <input type="password" class="form-control" id="password2" name="password2" [(ngModel)]="secondPassword"
+               required="required"
+        />
+      </div>
+      <button type="submit" class="btn btn-dark btn-block">提交</button>
+    </form>
+    <span>已经注册过了？<a href="#" routerLink="/login" routerLinkActive="active">登陆</a></span>
+
+  </div>
+
+  <div *ngIf="busy" class="text-center" style="margin: 100px 0px 0 0px">
+    <i class="fas fa-sync fa-5x fa-spin animated"></i>
+  </div>
+
+</div>
