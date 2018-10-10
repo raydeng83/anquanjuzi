@@ -18,9 +18,7 @@ public class RequestFilter implements Filter {
 
         String origin = request.getHeader("Origin");
 
-        response.setHeader("Access-Control-Allow-Origin", origin);
-
-
+        response.setHeader("Access-Control-Allow-Origin", "http://www.anquanjuzi.com");
 
         response.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
