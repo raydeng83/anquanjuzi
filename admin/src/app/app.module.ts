@@ -17,13 +17,15 @@ import {MenubarComponent} from './components/menubar/menubar.component';
 import { AddArtComponent } from './components/add-art/add-art.component';
 import {ArtService} from './services/art.service';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenubarComponent,
-    AddArtComponent
+    AddArtComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

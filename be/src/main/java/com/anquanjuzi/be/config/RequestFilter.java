@@ -18,8 +18,19 @@ public class RequestFilter implements Filter {
 
         String origin = request.getHeader("Origin");
 
+//        if (origin == null) {
+//            response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+//        } else
+            if (origin.equals("http://www.anquanjuzi.com") || origin.equals("http://admin.anquanjuzi.com"))
+        {
+            response.setHeader("Access-Control-Allow-Origin", origin);
+        }
+//        else {
+//            response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+//        }
+
 //        response.setHeader("Access-Control-Allow-Origin", "http://www.anquanjuzi.com");
-        response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+//        response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
 
         response.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
