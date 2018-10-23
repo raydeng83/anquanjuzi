@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   public autoHide = true;
   public responsive = true;
   public config = {
-    id: 'advanced',
-    itemsPerPage: 16,
+    id: 'artListHome',
+    itemsPerPage: 10,
     currentPage: 1
 
   };
@@ -41,8 +41,8 @@ export class HomeComponent implements OnInit {
   constructor(private artService: ArtService) {
   }
 
-  onPageChange(event) {
-
+  onPageChange(pageNumber) {
+    this.config.currentPage = pageNumber;
   }
 
   getArtList() {
